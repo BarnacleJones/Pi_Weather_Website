@@ -41,20 +41,24 @@
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Weather from OpenWeather data:</h2>
-        <h4 id=textfieldTemp></h4>
-        <h4 id="pressureField"></h4>
-        <h4 id="humidityField"></h4>
-        <h3>Timestamp:<span id="time"></span></h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><span id=textfieldTemp></span></li>
+          <li class="list-group-item"><span id="pressureField"></span></li>
+          <li class="list-group-item"><span id="humidityField"></span></li>
+          <li class="list-group-item">Timestamp:<span id="time"></span></li>
+        </ul>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Latest reading from Pi station:</h2>
-        <h3 id=piTemp>Temp: 0.00000</h3>
-        <h3 id="piPressure">Pressure: 0.00000</h3>
-        <h3 id="piHumidity">Humidity: 0.00000</h3>
-        <h3 id="timestamp">Timestamp: </h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><span id=piTemp>Temp: 0.00000</span></li>
+          <li class="list-group-item"><span id="piPressure">Pressure: 0.0000</span></li>
+          <li class="list-group-item"><span id="piHumidity">Humidity: 0.00000</span></li>
+          <li class="list-group-item">Timestamp:<span id="timestamp"></span></li>
+        </ul>
       </div>
     </div>
   </div>
