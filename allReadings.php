@@ -32,7 +32,7 @@
 
   <?php
   //Open the file.
-  $fileHandle = fopen("/home/pi/Documents/pythonScripts/data.csv", "r");
+  $fileHandle = fopen("data.csv", "r");
 
   echo '<h1>Temp/Pressure/Humidity/Time</h1>';
 
