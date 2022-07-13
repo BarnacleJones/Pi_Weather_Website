@@ -1,0 +1,22 @@
+{
+  "name": "pi_weather_website",
+  "version": "1.0.0",
+  "description": "Website running from Raspberry Pi, uploading sensor information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarnacleJones/Pi_Weather_Website.git"
+  },
+  "author": "Ben Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarnacleJones/Pi_Weather_Website/issues"
+  },
+  "homepage": "https://github.com/BarnacleJones/Pi_Weather_Website#readme",
+  "dependencies": {
+    "date-and-time": "^2.4.0"
+  }
+}
