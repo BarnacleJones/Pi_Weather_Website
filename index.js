@@ -13,7 +13,7 @@ let pressureField = document.getElementById("pressureField");
 let humidityField = document.getElementById("humidityField");
 
 
-document.getElementById("time").innerText = formattedTime;
+// document.getElementById("time").innerText = formattedTime;
 async function getWeather(city){
     try {          
     const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`, {mode: 'cors'});
