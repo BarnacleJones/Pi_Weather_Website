@@ -46,8 +46,9 @@
         <h4 id="humidityField"></h4>
         <h3>Timestamp:<span id="time"></span></h3>
       </div>
+    </div>
 
-
+    <div class="card">
       <div class="card-body">
         <h2 class="card-title">Latest reading from Pi station:</h2>
         <h3 id=piTemp>Temp: 0.00000</h3>
@@ -57,6 +58,7 @@
       </div>
     </div>
   </div>
+
 
 
 </body>
