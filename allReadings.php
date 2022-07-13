@@ -23,7 +23,7 @@
         <div class="navbar-nav">
           <a class="nav-link" href="./index.html">Home</a>
           <a class="nav-link active" aria-current="page" href="#">About</a>
-          <a class="nav-link" href="./allReadings.html">All Readings</a>
+          <a class="nav-link" href="./allReadings.php">All Readings</a>
         </div>
       </div>
     </div>
