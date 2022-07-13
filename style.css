@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(210, 232, 240);
+    background-image: url(./images/RPiSystem.png);
+    background-size: contain;
     font-family: 'Montserrat', sans-serif;
 }
 
