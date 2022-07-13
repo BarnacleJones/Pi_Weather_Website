@@ -21,7 +21,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link" href="./index.php">Home</a>
           <a class="nav-link active" aria-current="page" href="#">About</a>
           <a class="nav-link" href="./allReadings.php">All Readings</a>
         </div>
@@ -30,23 +30,32 @@
   </nav>
   <h1>All Readings</h1>
 
-  <?php
-  //Open the file.
-  $fileHandle = fopen("data.csv", "r");
+  <div class="container">
+    <?php
+    //Open the file.
+    $fileHandle = fopen("data.csv", "r");
 
-  echo '<h1>Temp/Pressure/Humidity/Time</h1>';
+    echo '<h1>Temp/Pressure/Humidity/Time</h1>';
 
-  //Loop through the CSV rows.
-  while (($row = fgetcsv($fileHandle, 0, ",")) !== FALSE) {
+    //Loop through the CSV rows.
+    while (($row = fgetcsv($fileHandle, 0, ",")) !== FALSE) {
 
-    echo 'Temperature: ' . $row[0] . '<br>';
-    echo 'Pressure: ' . $row[1] . '<br>';
-    echo 'Humidity: ' . $row[2] . '<br>';
-    echo 'Timestamp: ' . $row[3] . '<br>';
-    echo '<br>';
-  }
+      echo ('<div class="card">
+      <div class="card-body">
+        <h2 class="card-title">"Timestamp: "' . $row[3] . '</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">"Temperature: "' . $row[0] . '</li>
+          <li class="list-group-item">"Pressure: "' . $row[1] . '</li>
+          <li class="list-group-item">"Humidity: "' . $row[2] . '</li>
+          
+        </ul>
+      </div>
+    </div>');
+    }
 
-  ?>
+    ?>
+
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
