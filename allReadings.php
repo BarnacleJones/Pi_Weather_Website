@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pi Weather Station</title>
 
-  <script src="/Pi_Weather_Website/index.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <script src="/Pi_Weather_Website/index.js" defer></script>
 </head>
 
 <body>
@@ -21,37 +21,32 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="./about.html">About</a>
+          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">About</a>
           <a class="nav-link" href="./allReadings.html">All Readings</a>
         </div>
       </div>
     </div>
   </nav>
-  <div class="welcomeArea">
-    <h1>Welcome to Ben's Weather Station</h1>
-    <br>
-    <h2>Current Weather in location of Pi (<span id=city></span>)</h2>
-  </div>
-  <main class="currentReadings">
-    <div class="currentWeather">
-      <h2>Weather from OpenWeather data:</h2>
-      <h4 id=textfieldTemp></h4>
-      <h4 id="pressureField"></h4>
-      <h4 id="humidityField"></h4>
-      <h3 id="time">Timestamp: </h3>
+  <h1>All Readings</h1>
 
-    </div>
-    <div class="latestReading">
-      <h2>Latest reading from Pi station:</h2>
-      <h3 id=piTemp>Temp: 0.00000</h3>
-      <h3 id="piPressure">Pressure: 0.00000</h3>
-      <h3 id="piHumidity">Humidity: 0.00000</h3>
-      <h3 id="timestamp">Timestamp: </h3>
-    </div>
-  </main>
+  <?php
+  //Open the file.
+  $fileHandle = fopen("/home/pi/Documents/pythonScripts/data.csv", "r");
 
+  echo '<h1>Temp/Pressure/Humidity/Time</h1>';
 
+  //Loop through the CSV rows.
+  while (($row = fgetcsv($fileHandle, 0, ",")) !== FALSE) {
+
+    echo 'Temperature: ' . $row[0] . '<br>';
+    echo 'Pressure: ' . $row[1] . '<br>';
+    echo 'Humidity: ' . $row[2] . '<br>';
+    echo 'Timestamp: ' . $row[3] . '<br>';
+    echo '<br>';
+  }
+
+  ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
