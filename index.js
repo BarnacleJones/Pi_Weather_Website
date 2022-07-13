@@ -1,7 +1,6 @@
 
 const API_KEY = '2fa068cac41b91284b8fae107e0f1ed9';
 
-const now = new Date();
 
 
 //set up city for easy changing if pi changes location
@@ -14,7 +13,7 @@ let pressureField = document.getElementById("pressureField");
 let humidityField = document.getElementById("humidityField");
 
 
-document.getElementById("time").innerText = date.format(now, 'hh:mm A [GMT]Z', true);
+
 async function getWeather(city){
     try {          
     const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`, {mode: 'cors'});
