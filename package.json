@@ -2,7 +2,7 @@
   "name": "pi_weather_website",
   "version": "1.0.0",
   "description": "Website running from Raspberry Pi, uploading sensor information.",
-  "main": "index.js",
+  "main": "index.mjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
