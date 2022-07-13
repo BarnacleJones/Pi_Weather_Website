@@ -37,23 +37,26 @@
     <br>
     <h2>Current Weather in location of Pi (<span id=city></span>)</h2>
   </div>
-  <main class="currentReadings">
-    <div class="currentWeather">
-      <h2>Weather from OpenWeather data:</h2>
-      <h4 id=textfieldTemp></h4>
-      <h4 id="pressureField"></h4>
-      <h4 id="humidityField"></h4>
-      <h3 id="time">Timestamp: </h3>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Weather from OpenWeather data:</h2>
+        <h4 id=textfieldTemp></h4>
+        <h4 id="pressureField"></h4>
+        <h4 id="humidityField"></h4>
+        <h3>Timestamp:<span id="time"></span></h3>
+      </div>
 
+
+      <div class="card-body">
+        <h2 class="card-title">Latest reading from Pi station:</h2>
+        <h3 id=piTemp>Temp: 0.00000</h3>
+        <h3 id="piPressure">Pressure: 0.00000</h3>
+        <h3 id="piHumidity">Humidity: 0.00000</h3>
+        <h3 id="timestamp">Timestamp: </h3>
+      </div>
     </div>
-    <div class="latestReading">
-      <h2>Latest reading from Pi station:</h2>
-      <h3 id=piTemp>Temp: 0.00000</h3>
-      <h3 id="piPressure">Pressure: 0.00000</h3>
-      <h3 id="piHumidity">Humidity: 0.00000</h3>
-      <h3 id="timestamp">Timestamp: </h3>
-    </div>
-  </main>
+  </div>
 
 
 </body>
