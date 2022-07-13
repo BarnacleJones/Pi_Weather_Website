@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pi Weather Station</title>
   <script type="module" defer>
-    import date from 'node_modules/date-and-time/date-and-time.min.js';
+    import date from './node_modules/date-and-time/date-and-time.min.js';
     const now = new Date();
     document.getElementById("time").innerText = date.format(now, 'hh:mm A [GMT]Z', true);
   </script>
