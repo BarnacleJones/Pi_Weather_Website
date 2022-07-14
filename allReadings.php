@@ -60,7 +60,10 @@
            <ul class='list-group list-group-flush'>
             <li class='list-group-item'>Temperature: ' . $row[0] . '</li>
             <li class='list-group-item>Pressure: ' . $row[1] . '</li>
-           <li class='list-group-item'>Humidity: ' . $row[2] . '</li>";
+           <li class='list-group-item'>Humidity: ' . $row[2] . '</li>
+           </ul>
+           </div>
+           </div>";
     }
     $mysqli->close();
 
