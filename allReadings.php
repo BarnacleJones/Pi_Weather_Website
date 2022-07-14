@@ -40,7 +40,11 @@
 
     //Database connection
     $connection = new mysqli('localhost', $user, $pw, $db);
-
+    if ($connection->connect_errno) {
+      // failure
+    } else {
+      // success
+    }
 
     //variable that returns all records in database
     //creates a connection object
