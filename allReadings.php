@@ -69,9 +69,11 @@
     <br>            
     ";
       ?>
-    <?php endforeach; ?>
+    <?php endforeach;
 
+    $mysqli->close();
 
+    ?>
 
 
   </div>
