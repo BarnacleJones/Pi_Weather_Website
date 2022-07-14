@@ -54,7 +54,7 @@
     }
     //variable that returns all records in database
     //creates a connection object
-    $result = $connection->query('SELECT TOP 1 * FROM data order by TIMESTAMP desc');
+    $result = $connection->query('SELECT TOP 1 * FROM data ORDER BY TIMESTAMP desc');
 
     //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
@@ -74,7 +74,7 @@
     $mysqli->close();
 
     ?>
-    <!-- <div class="card">
+    <div class="card">
       <div class="card-body">
         <h2 class="card-title">Weather from OpenWeather data:</h2>
         <ul class="list-group list-group-flush">
@@ -84,7 +84,7 @@
           <li class="list-group-item">Timestamp:<span id="time"></span></li>
         </ul>
       </div>
-    </div> -->
+    </div>
 
     <script type="module">
       import date from './node_modules/date-and-time/esm/date-and-time.es.min.js';
