@@ -37,6 +37,17 @@
   </div>
   <div class="container">
     <?php
+
+    //error handling - this is GOLDEN - remember this!
+    //error handler function
+    function customError($errno, $errstr)
+    {
+      echo "<b>Error:</b> [$errno] $errstr";
+    }
+    //set error handler
+    set_error_handler("customError");
+
+
     // Database credentials
     $user = 'root';
     $pw = 'raspberry pi yum yum';
@@ -58,19 +69,13 @@
 
     //while ($row = mysqli_fetch_row($result)) {
 
-    //error handling - this is GOLDEN - remember this!
-    //error handler function
-    function customError($errno, $errstr)
-    {
-      echo "<b>Error:</b> [$errno] $errstr";
-    }
-    //set error handler
-    set_error_handler("customError");
-
-    echo ($result);
 
 
-    // $row = mysqli_fetch_row($result);
+    echo ("<b>$result</b>");
+
+
+    $row = mysqli_fetch_row($result);
+    echo ("<b>$row</b>");
     // echo ("<div class='card'>
     //             <div class='card-body'>
     //               <h2 class='card-title'>Timestamp: $row[3]</h2>
