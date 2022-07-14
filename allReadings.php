@@ -43,7 +43,7 @@
     if ($connection->ping()) {
       printf("Our connection is ok!\n");
     } else {
-      printf("Error: %s\n", $mysqli->error);
+      printf("Error: %s\n", $connection->error);
     }
 
     //variable that returns all records in database
