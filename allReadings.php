@@ -51,7 +51,7 @@
     $result = $connection->query('SELECT * FROM data');
     ?>
     <?php foreach ($result as $link) : ?>
-      <?php echo $link ?>
+      <?php echo $link[0] ?>
     <?php endforeach; ?>
 
 
