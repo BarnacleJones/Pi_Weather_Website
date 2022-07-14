@@ -78,19 +78,19 @@
     $mysqli->close();
 
     ?>
-    <!-- // <div class="card">
-    //   <div class="card-body">
-    //     <h2 class="card-title">Weather from OpenWeather data:</h2>
-    //     <ul class="list-group list-group-flush">
-    //       <li class="list-group-item"><span id=textfieldTemp></span></li>
-    //       <li class="list-group-item"><span id="pressureField"></span></li>
-    //       <li class="list-group-item"><span id="humidityField"></span></li>
-    //       <li class="list-group-item">Timestamp:<span id="time"></span></li>
-    //     </ul>
-    //   </div>
-    // </div> -->
-
     <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Weather from OpenWeather data:</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><span id=textfieldTemp></span></li>
+          <li class="list-group-item"><span id="pressureField"></span></li>
+          <li class="list-group-item"><span id="humidityField"></span></li>
+          <li class="list-group-item">Timestamp:<span id="time"></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="card">
       <div class="card-body">
         <h2 class="card-title">Latest reading from Pi station:</h2>
         <ul class="list-group list-group-flush">
@@ -101,7 +101,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
