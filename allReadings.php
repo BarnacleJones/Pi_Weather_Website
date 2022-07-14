@@ -52,6 +52,10 @@
 
     //turn record into an associative array
     $array = $result->fetch_assoc();
+
+    while ($row = mysqli_fetch_row($result)) {
+      printf("%s (%s)\n", $row[0], $row[1]);
+    }
     ?>
 
     <?php foreach ($array as $reading) : ?>
@@ -71,6 +75,7 @@
       ?>
     <?php endforeach;
 
+    //not sure if this will break things
     $mysqli->close();
 
     ?>
