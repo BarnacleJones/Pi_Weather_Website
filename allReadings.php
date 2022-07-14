@@ -53,17 +53,17 @@
     //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
     while ($row = mysqli_fetch_row($result)) {
-      echo "
-      <div class='card'>
+      echo ("<div class='card'>
          <div class='card-body'>
-           <h2 class='card-title'>Timestamp: ' . $row[3] . '</h2>
+           <h2 class='card-title'>Timestamp: $row[3]</h2>
            <ul class='list-group list-group-flush'>
-              <li class='list-group-item'>Temperature: ' . $row[0] . '</li>
-              <li class='list-group-item>Pressure: ' . $row[1] . '</li>
-              <li class='list-group-item'>Humidity: ' . $row[2] . '</li>
+              <li class='list-group-item'>Temperature: $row[0]</li>
+              <li class='list-group-item>Pressure: $row[1]</li>
+              <li class='list-group-item'>Humidity:$row[2]</li>
            </ul>
           </div>
-        </div>";
+        </div>"
+      );
     }
     $mysqli->close();
 
