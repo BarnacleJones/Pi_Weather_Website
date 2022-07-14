@@ -69,9 +69,12 @@
 
     //while ($row = mysqli_fetch_row($result)) {
 
-
-    while ($data = mysqli_fetch_assoc($result)) {
-      echo $data["TIMESTAMP"];
+    if (mysqli_num_rows($result) > 0) {
+      while ($data = mysqli_fetch_assoc($result)) {
+        echo $data["TEMPERATURE"];
+      }
+    } else {
+      echo "No Records Found!";
     }
 
     // echo ("<div class='card'>
