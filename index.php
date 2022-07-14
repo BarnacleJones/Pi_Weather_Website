@@ -74,7 +74,7 @@
     $mysqli->close();
 
     ?>
-    <div class="card">
+    <!-- <div class="card">
       <div class="card-body">
         <h2 class="card-title">Weather from OpenWeather data:</h2>
         <ul class="list-group list-group-flush">
@@ -84,27 +84,13 @@
           <li class="list-group-item">Timestamp:<span id="time"></span></li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <script type="module">
       import date from './node_modules/date-and-time/esm/date-and-time.es.min.js';
       const now = new Date();
       document.getElementById("time").innerText = date.format(now, 'hh:mm:s:SS A [GMT]Z');
     </script>
-    <!-- <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Latest reading from Pi station:</h2>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><span id=piTemp>Temp: 0.00000</span></li>
-          <li class="list-group-item"><span id="piPressure">Pressure: 0.0000</span></li>
-          <li class="list-group-item"><span id="piHumidity">Humidity: 0.00000</span></li>
-          <li class="list-group-item">Timestamp:<span id="timestamp"></span></li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
-
-
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
