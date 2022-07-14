@@ -54,24 +54,37 @@
 
     while ($row = mysqli_fetch_row($result)) {
       echo "
-      <div> 
-      <h2>TEMP</h2>           
-      <p>{$row[0]}</p>
-      <h2>PRESS</h2>
-      <p>{$row[1]}</p>
-      <h2>HuMID</h2>
-      <p>{$row[2]}</p>      
-      <h2>TIME</h2>
-      <p>{$row[3]}</p> 
-      <p>KEY</p>
-      <p>{$row[4]}</p> 
-      <br>            
-      </div>";
+      '<div class='card'>
+         <div class='card-body'>
+           <h2 class='card-title'>Timestamp: ' . $row[3] . '</h2>
+           <ul class='list-group list-group-flush'>
+            <li class='list-group-item'>Temperature: ' . $row[0] . '</li>
+            <li class='list-group-item>Pressure: ' . $row[1] . '</li>
+           <li class='list-group-item'>Humidity: ' . $row[2] . '</li>";
     }
-
-
-    //not sure if this will break things
     $mysqli->close();
+
+    //BELOW CODE IS FOR CSV READING
+    //Open the file.
+    // $fileHandle = fopen("data.csv", "r");
+
+    // echo '<h1>Temp/Pressure/Humidity/Time</h1>';
+
+    // //Loop through the CSV rows.
+    // while (($row = fgetcsv($fileHandle, 0, ",")) !== FALSE) {
+
+    //   echo ('<div class="card">
+    //   <div class="card-body">
+    //     <h2 class="card-title">Timestamp: ' . $row[3] . '</h2>
+    //     <ul class="list-group list-group-flush">
+    //       <li class="list-group-item">Temperature: ' . $row[0] . '</li>
+    //       <li class="list-group-item">Pressure: ' . $row[1] . '</li>
+    //       <li class="list-group-item">Humidity: ' . $row[2] . '</li>
+
+    //     </ul>
+    //   </div>
+    // </div>');
+    // }
 
     ?>
 
