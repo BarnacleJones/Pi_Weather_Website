@@ -41,18 +41,37 @@
     //Database connection
     $connection = new mysqli('localhost', $user, $pw, $db);
 
+    //error if connection fails
     if ($connection->connect_errno) {
       printf("Connect failed: %s\n", $connection->connect_error);
       exit();
     }
-
     //variable that returns all records in database
     //creates a connection object
     $result = $connection->query('SELECT * FROM data');
+
+    //turn record into an associative array
+    $array = $result->fetch_assoc();
     ?>
-    <?php foreach ($result as $link) : ?>
-      <?php echo $link[0] ?>
+
+    <?php foreach ($array as $reading) : ?>
+      <?php
+      echo "
+    <div> 
+    <h2>TEMP</h2>           
+    <p>{$reading['TEMPERATURE']}</p>
+    <h2>PRESS</h2>
+    <p>{$reading['PRESSURE']}</p>
+    <h2>HuMID</h2>
+    <p>{$reading['HUMIDITY']}</p>      
+    <h2>TIME</h2>
+    <p>{$reading['TIMESTAMP']}</p>  
+    <br>            
+    ";
+      ?>
     <?php endforeach; ?>
+
+
 
 
   </div>
