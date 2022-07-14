@@ -40,6 +40,7 @@
 
     //Database connection
     $connection = new mysqli('localhost', $user, $pw, $db);
+    echo $connection;
 
     //variable that returns all records in database
     //creates a connection object
