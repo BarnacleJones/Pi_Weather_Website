@@ -57,6 +57,20 @@
     // //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
     //while ($row = mysqli_fetch_row($result)) {
+
+    //error handling
+    //error handler function
+    function customError($errno, $errstr)
+    {
+      echo "<b>Error:</b> [$errno] $errstr";
+    }
+
+    //set error handler
+    set_error_handler("customError");
+
+
+
+
     $row = mysqli_fetch_row($result);
     echo ("<div class='card'>
                 <div class='card-body'>
