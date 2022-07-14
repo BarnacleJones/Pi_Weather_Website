@@ -59,7 +59,7 @@
       echo "
     <div> 
     <h2>TEMP</h2>           
-    <p>{$reading['TEMPERATURE']}</p>
+    <p>{$reading[0]}</p>
     <h2>PRESS</h2>
     <p>{$reading['PRESSURE']}</p>
     <h2>HuMID</h2>
