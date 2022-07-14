@@ -9,7 +9,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <?php include "connection.php" ?>
+
 </head>
 
 
@@ -32,6 +32,20 @@
   <h1>All Readings</h1>
 
   <div class="container">
+    <?php
+    // Database credentials
+    $user = 'root';
+    $pw = 'Yraspberry pi yum yum';
+    $db = 'sense_data';
+
+    //Database connection
+    $connection = new mysqli('localhost', $user, $pw, $db);
+
+
+    //variable that returns all records in database
+    //creates a connection object
+    $result = $connection->query('SELECT * FROM data');
+    ?>
     <?php foreach ($result as $link) : ?>
       <?php echo $link[0]; ?>
     <?php endforeach; ?>
