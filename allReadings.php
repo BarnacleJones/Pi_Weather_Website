@@ -64,7 +64,7 @@
         </div>"
       );
     }
-    $mysqli->close();
+    $connection->close();
 
     //BELOW CODE IS FOR CSV READING
     //Open the file.

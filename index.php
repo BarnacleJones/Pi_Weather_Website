@@ -58,17 +58,16 @@
 
     //while ($row = mysqli_fetch_row($result)) {
 
-    //error handling
+    //error handling - this is GOLDEN - remember this!
     //error handler function
     function customError($errno, $errstr)
     {
       echo "<b>Error:</b> [$errno] $errstr";
     }
-
     //set error handler
     set_error_handler("customError");
 
-
+    echo ($result);
 
 
     $row = mysqli_fetch_row($result);
@@ -83,7 +82,7 @@
                 </div>
               </div>");
     // }
-    $mysqli->close();
+    $connection->close();
 
     ?>
     <div class="card">
