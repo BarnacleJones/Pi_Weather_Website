@@ -50,8 +50,7 @@
     //creates a connection object
     $result = $connection->query('SELECT * FROM data');
 
-    //turn record into an associative array
-    $array = $result->fetch_assoc();
+    //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
     while ($row = mysqli_fetch_row($result)) {
       echo "
@@ -63,7 +62,9 @@
       <h2>HuMID</h2>
       <p>{$row[2]}</p>      
       <h2>TIME</h2>
-      <p>{$row[3]}</p>  
+      <p>{$row[3]}</p> 
+      <p>KEY</p>
+      <p>{$row[4]}</p> 
       <br>            
       </div>";
     }
