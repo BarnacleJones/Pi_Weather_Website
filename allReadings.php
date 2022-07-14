@@ -40,10 +40,10 @@
 
     //Database connection
     $connection = new mysqli('localhost', $user, $pw, $db);
-    if ($connection->ping()) {
-      printf("Our connection is ok!\n");
-    } else {
-      printf("Error: %s\n", $connection->error);
+
+    if ($connection->connect_errno) {
+      printf("Connect failed: %s\n", $connection->connect_error);
+      exit();
     }
 
     //variable that returns all records in database
