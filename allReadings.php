@@ -54,26 +54,20 @@
     $array = $result->fetch_assoc();
 
     while ($row = mysqli_fetch_row($result)) {
-      printf("%s (%s)\n", $row[0], $row[1]);
-    }
-    ?>
-
-    <?php foreach ($array as $reading) : ?>
-      <?php
       echo "
-    <div> 
-    <h2>TEMP</h2>           
-    <p>{$reading[0]}</p>
-    <h2>PRESS</h2>
-    <p>{$reading['PRESSURE']}</p>
-    <h2>HuMID</h2>
-    <p>{$reading['HUMIDITY']}</p>      
-    <h2>TIME</h2>
-    <p>{$reading['TIMESTAMP']}</p>  
-    <br>            
-    ";
-      ?>
-    <?php endforeach;
+      <div> 
+      <h2>TEMP</h2>           
+      <p>{$row[0]}</p>
+      <h2>PRESS</h2>
+      <p>{$row[1]}</p>
+      <h2>HuMID</h2>
+      <p>{$row[2]}</p>      
+      <h2>TIME</h2>
+      <p>{$row[3]}</p>  
+      <br>            
+      </div>";
+    }
+
 
     //not sure if this will break things
     $mysqli->close();
