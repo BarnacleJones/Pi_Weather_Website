@@ -45,6 +45,8 @@
     //creates a connection object
     $result = $connection->query('SELECT * FROM data');
 
+    echo $result;
+
     //BELOW CODE IS FOR CSV READING
     //Open the file.
     // $fileHandle = fopen("data.csv", "r");
