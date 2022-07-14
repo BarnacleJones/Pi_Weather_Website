@@ -48,7 +48,7 @@
     }
     //variable that returns all records in database
     //creates a connection object
-    $result = $connection->query('SELECT * FROM data');
+    $result = $connection->query('SELECT * FROM data order by TIMESTAMP desc');
 
     //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
