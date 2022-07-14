@@ -70,12 +70,10 @@
     //while ($row = mysqli_fetch_row($result)) {
 
 
+    while ($data = mysqli_fetch_assoc($result)) {
+      echo $data["TIMESTAMP"];
+    }
 
-    echo ("<b>$result</b>");
-
-
-    $row = mysqli_fetch_row($result);
-    echo ("<b>$row</b>");
     // echo ("<div class='card'>
     //             <div class='card-body'>
     //               <h2 class='card-title'>Timestamp: $row[3]</h2>
