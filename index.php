@@ -42,17 +42,53 @@
     <h2>Current Weather in location of Pi (<span id=city></span>)</h2>
   </div>
   <div class="container">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Weather from OpenWeather data:</h2>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><span id=textfieldTemp></span></li>
-          <li class="list-group-item"><span id="pressureField"></span></li>
-          <li class="list-group-item"><span id="humidityField"></span></li>
-          <li class="list-group-item">Timestamp:<span id="time"></span></li>
-        </ul>
-      </div>
-    </div>
+    <?php
+    // Database credentials
+    $user = 'root';
+    $pw = 'raspberry pi yum yum';
+    $db = 'sense_data';
+
+    //Database connection
+    $connection = new mysqli('localhost', $user, $pw, $db);
+
+    //error if connection fails
+    if ($connection->connect_errno) {
+      printf("Connect failed: %s\n", $connection->connect_error);
+      exit();
+    }
+    //variable that returns all records in database
+    //creates a connection object
+    $result = $connection->query('SELECT TOP 1 * FROM data order by TIMESTAMP desc');
+
+    //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
+
+    while ($row = mysqli_fetch_row($result)) {
+      echo ("<div class='card'>
+         <div class='card-body'>
+           <h2 class='card-title'>Timestamp: $row[3]</h2>
+           <ul class='list-group list-group-flush'>
+              <li class='list-group-item'>Temperature: $row[0]</li>
+              <li class='list-group-item'>Pressure: $row[1]</li>
+              <li class='list-group-item'>Humidity:$row[2]</li>
+           </ul>
+          </div>
+        </div>"
+      );
+    }
+    $mysqli->close();
+
+    ?>
+    <!-- // <div class="card">
+    //   <div class="card-body">
+    //     <h2 class="card-title">Weather from OpenWeather data:</h2>
+    //     <ul class="list-group list-group-flush">
+    //       <li class="list-group-item"><span id=textfieldTemp></span></li>
+    //       <li class="list-group-item"><span id="pressureField"></span></li>
+    //       <li class="list-group-item"><span id="humidityField"></span></li>
+    //       <li class="list-group-item">Timestamp:<span id="time"></span></li>
+    //     </ul>
+    //   </div>
+    // </div> -->
 
     <div class="card">
       <div class="card-body">
