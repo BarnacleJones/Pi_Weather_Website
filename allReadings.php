@@ -35,7 +35,7 @@
     <?php
     // Database credentials
     $user = 'root';
-    $pw = 'Yraspberry pi yum yum';
+    $pw = 'raspberry pi yum yum';
     $db = 'sense_data';
 
     //Database connection
