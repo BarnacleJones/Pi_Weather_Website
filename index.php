@@ -78,11 +78,12 @@
         // echo $data["TEMPERATURE"];
         echo ("<div class='card'>
                   <div class='card-body'>
-                    <h2 class='card-title'>Latest Timestamp: $data[$timestamp]</h2>
+                    <h2 class='card-title'>Latest reading from Pi: </h2>
                     <ul class='list-group list-group-flush'>
                         <li class='list-group-item'>Temperature: $data[$temp]</li>
                         <li class='list-group-item'>Pressure: $data[$pres]</li>
                         <li class='list-group-item'>Humidity:$data[$humid]</li>
+                        <li class='list-group-item'>Timestamp:$data[$timestamp]</li>
                     </ul>
                   </div>
                 </div>");
