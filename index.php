@@ -73,11 +73,11 @@
         // echo $data["TEMPERATURE"];
         echo ("<div class='card'>
                   <div class='card-body'>
-                    <h2 class='card-title'>Timestamp: $data[3]</h2>
+                    <h2 class='card-title'>Latest Timestamp: $data['TIMESTAMP']</h2>
                     <ul class='list-group list-group-flush'>
-                        <li class='list-group-item'>Temperature: $data[0]</li>
-                        <li class='list-group-item'>Pressure: $data[1]</li>
-                        <li class='list-group-item'>Humidity:$data[2]</li>
+                        <li class='list-group-item'>Temperature: $data['TEMPERATURE']</li>
+                        <li class='list-group-item'>Pressure: $data['PRESSURE']</li>
+                        <li class='list-group-item'>Humidity:$data['HUMIDITY']</li>
                     </ul>
                   </div>
                 </div>");
