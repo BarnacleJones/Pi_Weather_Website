@@ -110,7 +110,7 @@
     <!-- footer -->
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="text-center mt-5 footer-copyright">
           <a href="https://github.com/BarnacleJones/Pi_Weather_Website">GitHub</a>
         </div>
         <!-- <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
