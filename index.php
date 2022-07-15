@@ -68,16 +68,21 @@
     // $result = $connection->query('SELECT * FROM data');
     // //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
+    $timestamp = "TIMESTAMP";
+    $temp = "TEMPERATURE";
+    $pres = "PRESSURE";
+    $humid = "HUMIDITY";
+
     if (mysqli_num_rows($result) > 0) {
       while ($data = mysqli_fetch_assoc($result)) {
         // echo $data["TEMPERATURE"];
         echo ("<div class='card'>
                   <div class='card-body'>
-                    <h2 class='card-title'>Latest Timestamp: $data['TIMESTAMP']</h2>
+                    <h2 class='card-title'>Latest Timestamp: $data[$timestamp]</h2>
                     <ul class='list-group list-group-flush'>
-                        <li class='list-group-item'>Temperature: $data['TEMPERATURE']</li>
-                        <li class='list-group-item'>Pressure: $data['PRESSURE']</li>
-                        <li class='list-group-item'>Humidity:$data['HUMIDITY']</li>
+                        <li class='list-group-item'>Temperature: $data[$temp]</li>
+                        <li class='list-group-item'>Pressure: $data[$pres]</li>
+                        <li class='list-group-item'>Humidity:$data[$humid]</li>
                     </ul>
                   </div>
                 </div>");
