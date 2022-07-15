@@ -7,6 +7,8 @@
     <title>Pi Weather Station</title>
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">  
     <script src="index.js" type="module" defer></script>
   </head>
@@ -25,29 +27,90 @@
             </div>
           </div>
         </div>
-      </nav>
-      <h1>About</h1>
+      </nav>     
+      <div class="container">
+        <header class="text-center">
+          <h1>About this project</h1>
+          <hr>
+          <h2>Briefly details the steps to build this project</h2>
+        </header> 
+        
+         <!-- Setting up sense hat -->
+        <div class="card-deck">
+          <div class="card text-center">
+            <img class="card-img-top" id="sensePhoto" src="./images/senseHat.jpg" alt="Image of a Sense HAT">
+              <div class="card-body">
+                <h5 class="card-title">Using the Sense HAT</h5>
+                <p class="card-text">I first started tinkering with the sense hat API, blinking lights and gathering readings via python scripts.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">See API Documentation Below</li>
+                <li class="list-group-item"><a href="https://pythonhosted.org/sense-hat/api/">Sense HAT API Reference</a></li>
+              </ul>
+              <div class="card-body">
+              <p>Challenge here was getting into writing Python scripts for the first time .<br> Really came to enjoy the regimented structure of Python!</p>
+            </div>
+          </div>
+          <!-- Writing to CSV -->
+          <div class="card-deck">
+            <div class="card text-center">
+              <img class="card-img-top" id="sensePhoto" src="./images/csv.png" alt="Image of a CSV thumbnail">
+                <div class="card-body">
+                  <h5 class="card-title">Writing temperature/humidiy/pressure readings to CSV</h5>
+                  <p class="card-text">My next step was writing the sensory readings to a CSV file.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">See tutorial I followed below</li>
+                  <li class="list-group-item"><a href="https://projects.raspberrypi.org/en/projects/sense-hat-data-logger/">Writing out to CSV tutorial</a></li>
+                </ul>
+                <div class="card-body">
+                <p>This was a great tutorial, one of the rare ones where everything seemed to work the first try!</p>
+              </div>
+            </div>
 
-    <!-- 
-        <?php
-//Open the file.
-$fileHandle = fopen("/home/pi/Documents/pythonScripts/data.csv", "r");
+        <!-- Setting up apache/php -->
+        <div class="card-deck">
+          <div class="card text-center">
+            <img class="card-img-top" id="sensePhoto" src="./images/apache.png" alt="Image of Apache webserver logo">
+              <div class="card-body">
+                <h5 class="card-title">Setting up Apache/PHP on the Raspberry Pi</h5>
+                <p class="card-text">The next step was setting up a server so I could display readings on a simple website locally.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Used a number of sources to get this up and running</li>
+                <li class="list-group-item">Overall straightforward.</li>
+              </ul>
+              <div class="card-body">
+              <p>The only challenge here was diving into the unknown! I was suprised at the simplicity of getting an Apache server up and running.</p>
+            </div>
+          </div>
+        <!-- Deciding to use database for content filerting -->
+        <div class="card-deck">
+          <div class="card text-center">
+            <img class="card-img-top" id="sensePhoto" src="./images/mysql.jpg" alt="Image of a mySQL logo">
+              <div class="card-body">
+                <h5 class="card-title">Pivoting to MySQL</h5>
+                <p class="card-text">I decided the CSV file would be a bit simplistic, so took on the challenge of installing mySQL and PHPAdmin on the Apache server</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">This was a lengthy step as I needed to figure out how to establish a connection with Python</li>
+                <li class="list-group-item"><a href="https://projects.raspberrypi.org/en/projects/sense-hat-data-logger/">Writing out to CSV tutorial</a></li>
+              </ul>
+              <div class="card-body">
+              <p>This was a great tutorial, one of the rare ones where everything seemed to work the first try!</p>
+            </div>
+          </div>
+        <!-- Installing database/php admin -->
+        <!-- Creating website - include bootstrap -->
+        <!-- final product -->
+      </div>
+  
+</div>
 
-echo '<h1>Temp/Pressure/Humidity/Time</h1>';
+      
 
-//Loop through the CSV rows.
-while (($row = fgetcsv($fileHandle, 0, ",")) !== FALSE) {
-
-    echo 'Temperature: ' . $row[0] . '<br>';
-    echo 'Pressure: ' . $row[1] . '<br>';
-    echo 'Humidity: ' . $row[2] . '<br>';
-    echo 'Timestamp: ' . $row[3] . '<br>';
-    echo '<br>';
-}
-
-?>
-     -->
+   
+       
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </html>
 

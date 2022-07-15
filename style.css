@@ -8,3 +8,12 @@ body{
 .welcomeArea{
     text-align: center;
 }
+
+#sensePhoto{
+    width: 50%;
+    align-self: center;
+}
+
+.card{
+   margin-bottom: 1rem;
+}

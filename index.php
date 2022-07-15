@@ -113,11 +113,6 @@
         <div class="text-center mt-5 footer-copyright">
           <a href="https://github.com/BarnacleJones/Pi_Weather_Website">GitHub</a>
         </div>
-        <!-- <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-    </ul> -->
       </footer>
     </div>
 
