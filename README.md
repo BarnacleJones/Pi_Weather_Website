@@ -1,5 +1,17 @@
 #Readme
 
-Project to stream temperature/humidity/pressure from any location (within my wifi range) 
-to a website, hosted on the Pi via apache server.
+Project to feed temperature/humidity/pressure from any location (within my wifi range) to a database via a python script, all hosted on the Pi via apache server.
 
+Website uses PHP to read database information and display all readings (allReadings.php), or just the latest reading alongside forcasted weather data (index.php).
+
+
+Technologies used in this project:
+
+Raspberry Pi + Sense HAT
+Python
+HTML/CSS/Javascript
+Apache/PHP/MySQL
+PHPMyAdmin
+Bootstrap
+NPM (for date-and-time library).
+OpenWeather API for current forecase information.
