@@ -33,10 +33,28 @@
           <h1>About this project</h1>
           <hr>
           <h2>Briefly details the steps to build this project</h2>
-        </header> 
-        
-         <!-- Setting up sense hat -->
+        </header>    
         <div class="card-deck">
+          <!-- TLDR -->
+             <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">TLDR; Tech stack used</h5>
+                  <p class="card-text">To briefly summarise, the following technologies were used in this project:</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Python</li>
+                  <li class="list-group-item">HTML/CSS/Javascript</li>
+                  <li class="list-group-item">Apache/PHP/MySQL</li>     
+                  <li class="list-group-item">PHPMyAdmin</li>
+                  <li class="list-group-item">Bootstrap</li>
+                  <li class="list-group-item">Raspberry Pi + Sense HAT</li>  
+                  <li class="list-group-item"><a href="https://github.com/BarnacleJones/Pi_Weather_Website">GitHub repo</a></li>                            
+                </ul>
+                <div class="card-body">
+                <p>Thanks for checking this out! Read a bit more about the steps involved below.</p>
+              </div>
+            </div>
+            <!-- Setting up sense hat -->
           <div class="card text-center">
             <img class="card-img-top" id="sensePhoto" src="./images/senseHat.jpg" alt="Image of a Sense HAT">
               <div class="card-body">
@@ -48,11 +66,10 @@
                 <li class="list-group-item"><a href="https://pythonhosted.org/sense-hat/api/">Sense HAT API Reference</a></li>
               </ul>
               <div class="card-body">
-              <p>Challenge here was getting into writing Python scripts for the first time .<br> Really came to enjoy the regimented structure of Python!</p>
+              <p>Challenge here was getting into writing Python scripts for the first time.<br> Really came to enjoy the regimented structure of Python!</p>
             </div>
           </div>
-          <!-- Writing to CSV -->
-          <div class="card-deck">
+          <!-- Writing to CSV -->          
             <div class="card text-center">
               <img class="card-img-top" id="sensePhoto" src="./images/csv.png" alt="Image of a CSV thumbnail">
                 <div class="card-body">
@@ -67,9 +84,7 @@
                 <p>This was a great tutorial, one of the rare ones where everything seemed to work the first try!</p>
               </div>
             </div>
-
         <!-- Setting up apache/php -->
-        <div class="card-deck">
           <div class="card text-center">
             <img class="card-img-top" id="sensePhoto" src="./images/apache.png" alt="Image of Apache webserver logo">
               <div class="card-body">
@@ -85,7 +100,6 @@
             </div>
           </div>
         <!-- Deciding to use database for content filerting -->
-        <div class="card-deck">
           <div class="card text-center">
             <img class="card-img-top" id="sensePhoto" src="./images/mysql.jpg" alt="Image of a mySQL logo">
               <div class="card-body">
@@ -94,23 +108,29 @@
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">This was a lengthy step as I needed to figure out how to establish a connection with Python</li>
-                <li class="list-group-item"><a href="https://projects.raspberrypi.org/en/projects/sense-hat-data-logger/">Writing out to CSV tutorial</a></li>
+                <li class="list-group-item">Also needed to sharpen my PHP knowledge to get the connection to the database.</li>
+                <li class="list-group-item">Also needed to design the database and get that going on my Apache server!</li>              
               </ul>
               <div class="card-body">
-              <p>This was a great tutorial, one of the rare ones where everything seemed to work the first try!</p>
+              <p>This was by far the most challenging portion of the project! I have definitely sharpened my PHP debugging skills.<br>I also was using Github to push from my development environment + pull on the server. This is why this GitHub repository has hundreds of commits!</p>
             </div>
           </div>
-        <!-- Installing database/php admin -->
-        <!-- Creating website - include bootstrap -->
-        <!-- final product -->
-      </div>
-  
-</div>
-
-      
-
-   
-       
+        <!-- Final product -->
+          <div class="card text-center">
+            <img class="card-img-top" id="sensePhoto" src="./images/done.jpeg" alt="Image of a dev">
+              <div class="card-body">
+                <h5 class="card-title">Completed project!</h5>
+                <p class="card-text">Final touches.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Bootstrap/CSS/PHP/HTML</li>                
+              </ul>
+              <div class="card-body">
+              <p>Now all the pieces were working I made a friendly website. Next step - hosting on the actual web via the Pi!</p>
+            </div>
+          </div>        
+      </div>  
+</div>  
 </body>
 </html>
 
