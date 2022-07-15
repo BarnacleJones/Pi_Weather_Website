@@ -22,3 +22,10 @@ NPM (for date-and-time library).
 
 OpenWeather API for current forecase information.
 
+
+# Next steps:
+
+Securing database credential information in separate files + update gitignore
+
+Hosting on the actual web!
+
