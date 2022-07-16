@@ -29,3 +29,4 @@ Securing database credential information in separate files + update gitignore
 
 Hosting on the actual web!
 
+![hippo](https://media0.giphy.com/media/d0oQCg8ZuyI80V5sYI/giphy.gif?cid=790b7611f67881becfc821585803651a7ad5cb24e0c5e630&rid=giphy.gif&ct=g)
