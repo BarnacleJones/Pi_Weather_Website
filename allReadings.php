@@ -31,11 +31,8 @@
   <h1>All Readings</h1>
 
   <div class="container">
+    <?php include "connection.php" ?>
     <?php
-    // Database credentials
-    $user = 'root';
-    $pw = 'raspberry pi yum yum';
-    $db = 'sense_data';
 
     //Database connection
     $connection = new mysqli('localhost', $user, $pw, $db);

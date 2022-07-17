@@ -36,6 +36,8 @@
     <h2>Current Weather in location of Pi (<span id=city></span>)</h2>
   </div>
   <div class="container">
+
+    <?php include "connection.php" ?>
     <?php
 
     //error handling - this is GOLDEN - remember this!
@@ -47,11 +49,6 @@
     //set error handler
     set_error_handler("customError");
 
-
-    // Database credentials
-    $user = 'root';
-    $pw = 'raspberry pi yum yum';
-    $db = 'sense_data';
 
     //Database connection
     $connection = new mysqli('localhost', $user, $pw, $db);
