@@ -22,6 +22,22 @@ NPM (for date-and-time library).
 
 OpenWeather API for current forecase information.
 
+# In action
+
+## Landing page
+
+![hippo](https://media.giphy.com/media/Kb9ZwlabNn5p5uekiI/giphy.gif)
+
+
+## About page
+
+![hippo](https://media.giphy.com/media/VxnEf2tuS4PScxCqlu/giphy.gif)
+
+
+## All readings page
+
+![hippo](https://media.giphy.com/media/wpwVp14WCq13qH1exF/giphy.gif)
+
 
 # Next steps:
 
@@ -29,4 +45,4 @@ Securing database credential information in separate files + update gitignore
 
 Hosting on the actual web!
 
-![hippo](https://media0.giphy.com/media/d0oQCg8ZuyI80V5sYI/giphy.gif?cid=790b7611f67881becfc821585803651a7ad5cb24e0c5e630&rid=giphy.gif&ct=g)
+
