@@ -60,12 +60,12 @@
     }
     // //variable that returns all records in database
     // //creates a connection object
-    $result = $connection->query('SELECT * FROM data ORDER BY TIMESTAMP desc LIMIT 1');
+    $result = $connection->query('SELECT * FROM sense_data ORDER BY TIMESTAMP desc LIMIT 1');
 
-    $timestamp = "TIMESTAMP";
-    $temp = "TEMPERATURE";
-    $pres = "PRESSURE";
-    $humid = "HUMIDITY";
+    $timestamp = "timestamp";
+    $temp = "temp_reading";
+    $pres = "press_reading";
+    $humid = "humid_reading";
 
     if (mysqli_num_rows($result) > 0) {
       while ($data = mysqli_fetch_assoc($result)) {

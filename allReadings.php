@@ -44,18 +44,18 @@
     }
     //variable that returns all records in database
     //creates a connection object
-    $result = $connection->query('SELECT * FROM data order by TIMESTAMP desc');
+    $result = $connection->query('SELECT * FROM sense_data order by TIMESTAMP desc');
 
     //https://www.w3schools.com/Php/func_mysqli_fetch_row.asp
 
     while ($row = mysqli_fetch_row($result)) {
       echo ("<div class='card'>
          <div class='card-body'>
-           <h2 class='card-title'>Timestamp: $row[3]</h2>
+           <h2 class='card-title'>Timestamp: $row[5]</h2>
            <ul class='list-group list-group-flush'>
-              <li class='list-group-item'>Temperature: $row[0]</li>
-              <li class='list-group-item'>Pressure: $row[1]</li>
-              <li class='list-group-item'>Humidity:$row[2]</li>
+              <li class='list-group-item'>Temperature: $row[2]</li>
+              <li class='list-group-item'>Pressure: $row[3]</li>
+              <li class='list-group-item'>Humidity:$row[4]</li>
            </ul>
           </div>
         </div>"
