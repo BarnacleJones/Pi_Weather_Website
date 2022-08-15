@@ -13,7 +13,7 @@ delay = 1500
 
 # open connection/create cursor
 db = mysql.connector.connect(host="localhost", user="root",
-                             password="raspberry pi yum yum", database="sense_data")
+                             password="*****", database="sense_data")
 mycursor = db.cursor()
 
 
