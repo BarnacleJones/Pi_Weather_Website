@@ -4,6 +4,8 @@ Project to feed temperature/humidity/pressure from any location (within my wifi 
 
 Website uses PHP to read database information and display all readings (allReadings.php), or the latest reading alongside forcasted weather data (index.php).
 
+Relational database design, testing, and commands included in SQL folder.
+
 # Technologies used:
 
 Raspberry Pi + Sense HAT
