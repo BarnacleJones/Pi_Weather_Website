@@ -29,10 +29,6 @@ OpenWeather API for current forecase information.
 ![hippo](https://media.giphy.com/media/Kb9ZwlabNn5p5uekiI/giphy.gif)
 
 
-## About page
-
-![hippo](https://media.giphy.com/media/VxnEf2tuS4PScxCqlu/giphy.gif)
-
 
 ## All readings page
 
@@ -41,8 +37,6 @@ OpenWeather API for current forecase information.
 
 # Next steps:
 
-Securing database credential information in separate files + update gitignore
-
-Hosting on the actual web!
+Containerising each part of the project in docker containers.
 
 
