@@ -39,6 +39,6 @@ OpenWeather API for current forecase information.
 
 # Next steps:
 
-Containerising each part of the project in docker containers.
+After these readings, moving out of my cold damp house
 
 
